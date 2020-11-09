@@ -23,6 +23,9 @@ To Do:
     import csv with users to send to: https://realpython.com/python-send-email/#sending-multiple-personalized-emails
     format name instead of email appearing as sender
     automate it
+
+
+    lines to change: 38
 '''
 
 
@@ -36,9 +39,12 @@ sender_email = "theofficialleastace@gmail.com"
 password = input("Type your password and press enter: ")
 sender_name = input("sender name: ")
 
+with open("template.txt") as f:
+    template = f.read()
+
 def message(name, email, company):
     msg = EmailMessage()
-    msg['Subject'] = "An email to " + company
+    msg['Subject'] = "HooHacks Sponsorship Opportunities for " + company
     msg['From'] = "theofficialleastace@gmail.com"
     msg['To'] = email
     msg['Cc'] = ""
@@ -46,21 +52,7 @@ def message(name, email, company):
     # Add the html version.  This converts the message into a multipart/alternative
     # container, with the original text message as the first part and the new html
     # message as the second part.
-    asparagus_cid = make_msgid()
-    msg.add_alternative("""\
-    <html>
-      <head></head>
-      <body>
-        <p>Salut! {name}</p>
-        <p>Cela ressemble à un excellent {company}
-            <a href="http://www.yummly.com/recipe/Roasted-Asparagus-Epicurious-203718">
-                recipie
-            </a> déjeuner.
-        </p>
-        <img src="cid:{asparagus_cid}" />
-      </body>
-    </html>
-    """.format(name = name, company = company, asparagus_cid=asparagus_cid[1:-1]), subtype='html')
+    msg.add_alternative(template.format(name = name, company = company, sender_name = sender_name), subtype='html')
     # note that we needed to peel the <> off the msgid for use in the html.
     return msg
 

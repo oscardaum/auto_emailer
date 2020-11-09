@@ -1,0 +1,23 @@
+    <html>
+      <head></head>
+      <body>
+        <p>Dear {name},</p>
+        <p>My name is {sender_name}, and I am one of the members of the HooHacks team, the team that plans the premier hackathon at the University of Virginia. I&rsquo;m writing to update you on the ways you can get involved in the events we&rsquo;re planning this year for UVA students!</p>
+        <p>Despite the COVID-19 conundrum, we are committed to delivering an important coding and learning experience for our students and a way for our corporate sponsors to meet them and help them grow! We are keeping safety at the forefront of our minds, and have decided on several things about HooHacks 2021.</p>
+        <p><a href="http://hoohacks.io/">HooHacks 2021</a>: March 27 - 28th, 2021</p>
+        <ul>
+        <li>Our hackathon has only grown in the past years, and is one of <strong>the top 50 collegiate hackathons</strong> in the world! Last year we had <strong>800 participants</strong> from around the world. We were also one of the first MLH hackathons to pull off a virtual event last year, and saw an increase in the number of attendees!</li>
+        <li>Because we are unsure as to what the COVID-19 situation will be next spring, our team has decided to make HooHacks 2021 <strong>fully virtual</strong>.</li>
+        <li>In terms of sponsorship amongst the different situations, we have detailed further about the perks and pitfalls of each one in <strong>our sponsorship packet</strong>, which we have linked below!</li>
+        </ul>
+        <p>This will be our <strong>8th</strong> annual hackathon! We appreciate all the support you provided us last year and would love to see {company}; involved this year as well, as mentors, prize sponsors, or judges for our students!</p>
+        <p>Here are the links for our HooHacks 2021 sponsorship packet and website:</p>
+        <p><a href="https://tinyurl.com/HooHacks21SponsorshipPacket">https://tinyurl.com/HooHacks21SponsorshipPacket</a></p>
+        <p><a href="https://hoohacks.io/">https://hoohacks.io</a></p>
+        <p>I look forward to hearing from you and if you have any questions, feel free to reach out!</p>
+        <p>Thanks,</p>
+        <p>{sender_name}</p>
+        <p>HooHacks Board Member</p>
+        <p><br /><br /></p>
+      </body>
+    </html>
