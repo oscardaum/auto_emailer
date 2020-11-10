@@ -1,4 +1,4 @@
-    <html>
+ <html>
       <head></head>
       <body>
         <p>Dear {name},</p>
@@ -10,7 +10,7 @@
         <li>Because we are unsure as to what the COVID-19 situation will be next spring, our team has decided to make HooHacks 2021 <strong>fully virtual</strong>.</li>
         <li>In terms of sponsorship amongst the different situations, we have detailed further about the perks and pitfalls of each one in <strong>our sponsorship packet</strong>, which we have linked below!</li>
         </ul>
-        <p>This will be our <strong>8th</strong> annual hackathon! We appreciate all the support you provided us last year and would love to see {company}; involved this year as well, as mentors, prize sponsors, or judges for our students!</p>
+        <p>This will be our <strong>8th</strong> annual hackathon! We appreciate all the support you provided us last year and would love to see {company} involved this year as well, as mentors, prize sponsors, or judges for our students!</p>
         <p>Here are the links for our HooHacks 2021 sponsorship packet and website:</p>
         <p><a href="https://tinyurl.com/HooHacks21SponsorshipPacket">https://tinyurl.com/HooHacks21SponsorshipPacket</a></p>
         <p><a href="https://hoohacks.io/">https://hoohacks.io</a></p>
