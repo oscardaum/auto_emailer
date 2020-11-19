@@ -35,24 +35,30 @@ from email.headerregistry import Address
 from email.utils import make_msgid
 from email.message import EmailMessage
 
-sender_email = "theofficialleastace@gmail.com"
+sender_email = "hoohacks.sponsorship@gmail.com"
 password = input("Type your password and press enter: ")
 sender_name = input("sender name: ")
 
 with open("template.txt") as f:
     template = f.read()
 
+with open("template-noname.txt") as f:
+    template_noname = f.read()
+
 def message(name, email, company):
     msg = EmailMessage()
     msg['Subject'] = "HooHacks Sponsorship Opportunities for " + company
-    msg['From'] = "theofficialleastace@gmail.com"
+    msg['From'] = sender_name + " <hoohacks.sponsorship@gmail.com>"
     msg['To'] = email
-    msg['Cc'] = ""
+    msg['Cc'] = "hackathon.virginia@gmail.com"
     msg['Bcc'] = ""
     # Add the html version.  This converts the message into a multipart/alternative
     # container, with the original text message as the first part and the new html
     # message as the second part.
-    msg.add_alternative(template.format(name = name, company = company, sender_name = sender_name), subtype='html')
+    if(name == ""):
+        msg.add_alternative(template_noname.format(company=company, sender_name=sender_name), subtype='html')
+    else:
+        msg.add_alternative(template.format(name = name, company = company, sender_name = sender_name), subtype='html')
     # note that we needed to peel the <> off the msgid for use in the html.
     return msg
 
@@ -60,7 +66,7 @@ def message(name, email, company):
 # Log in to server using secure context and send email
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-    with open("trial-1.csv") as file:
+    with open("Sponsorship List 1.csv") as file:
         reader = csv.reader(file)
         next(reader)  # Skip header row
         for email, name, company in reader:
