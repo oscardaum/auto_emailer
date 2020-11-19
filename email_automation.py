@@ -34,6 +34,8 @@ import csv
 from email.headerregistry import Address
 from email.utils import make_msgid
 from email.message import EmailMessage
+import time
+
 
 sender_email = "hoohacks.sponsorship@gmail.com"
 password = input("Type your password and press enter: ")
@@ -66,10 +68,11 @@ def message(name, email, company):
 # Log in to server using secure context and send email
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-    with open("Sponsorship List 1.csv") as file:
+    with open("Sponsorship List 1-Test.csv") as file:
         reader = csv.reader(file)
         next(reader)  # Skip header row
         for email, name, company in reader:
+            time.sleep(30)
             print(f"Sending email to {name}")
             # Send email here
             server.login(sender_email, password)
